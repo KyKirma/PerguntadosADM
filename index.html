@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seu Jogo</title>
   <link rel="stylesheet" href="styles.css">
+  <title>AdministraQuiz</title>
 </head>
 <body>
   <div id="game-container">
@@ -20,11 +20,20 @@
       <div id="challenge-screen" class="screen hidden">
         <h2>Novo Desafio</h2>
         <p>
-          
+          Embarque em uma jornada emocionante onde a sorte, a sabedoria sobre administração pavimentaram o caminho para a salvação dos nossos amigos de quatro patas. Sua missão? Rodar a roleta e  responder perguntas desafiadoras e enfrentar o temível Chefão para libertar os cachorros e trazê-los de volta para casa.
         </p>
         <input type="text" id="player-name" placeholder="Seu nome" />
+        <button id="continue-button">Continuar</button>
+      </div>
+      <div id="instructions-screen" class="screen hidden">
+        <h2>Instruções</h2>
+        <ul style="padding-left: 16px; list-style-position: inside;">
+          <li><b>Rodar a Roleta</b>: Comece sua aventura girando a roleta colorida. Cada cor determinará um tipo diferente de tópico, então cruze os dedos e torça por um bom giro!</li>
+          <li><b>Responder Perguntas</b>: Esteja preparado para testar seu conhecimento. As perguntas vão exigir toda a sua inteligência e agilidade mental. Cada resposta correta te aproxima da vitória e da libertação dos cachorros.</li>
+          <li><b>Enfrentar o Chefão</b>: O caminho para a liberdade dos cachorrinhos é guardado pelo temível Chefão. Prepare-se para um confronto épico, onde apenas os mais corajosos prevalecerão.</li>
+          <li><b>Salvar os Cachorros</b>: Depois de derrotar o Chefão, é hora de levar os cachorrinhos para casa. Mostre sua bravura e bondade, e torne-se o herói que esses cachorros merecem!</li>
+        </ul>
         <button id="start-button">Começar</button>
-        <!-- Espaço para adicionar a roleta -->
       </div>
       <!-- Tela do Chefão -->
       <div id="boss-screen" class="screen hidden">
