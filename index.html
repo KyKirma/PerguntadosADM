@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seu Jogo</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="game-container">
+  <!-- Tela Inicial -->
+  <div id="home-screen" class="screen">
+    <h1>Jogo</h1>
+    <button id="play-button">Jogar</button>
+    <button id="score-button">Score</button>
+  </div>
+
+  <!-- Tela do Desafio -->
+  <div id="challenge-screen" class="screen hidden">
+    <h2>Novo Desafio</h2>
+    <input type="text" id="player-name" placeholder="Seu nome" />
+    <button id="start-button">Começar</button>
+    <!-- Espaço para adicionar a roleta -->
+  </div>
+
+  <!-- Tela do Chefão -->
+  <div id="boss-screen" class="screen hidden">
+    <h2>Chefão</h2>
+    <div id="boss-lives"></div>
+    <div id="player-lives"></div>
+    <!-- Espaço para adicionar a roleta do chefão -->
+    <!-- Espaço para perguntas -->
+  </div>
+
+  <!-- Tela de Vitória -->
+  <div id="victory-screen" class="screen hidden">
+    <h2>Você Venceu!</h2>
+    <button id="return-button">Voltar</button>
+  </div>
+
+  <!-- Tela de Derrota -->
+  <div id="defeat-screen" class="screen hidden">
+    <h2>Você Perdeu :C</h2>
+    <button id="try-again-button">Tentar dnv</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
