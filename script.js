@@ -12,6 +12,10 @@ const startButton = document.getElementById('start-button');
 const returnButton = document.getElementById('return-button');
 const tryAgainButton = document.getElementById('try-again-button');
 
+// Inicializa os Audios
+const audio = document.getElementById("audio");
+const audioButton = document.getElementById('mute_button')
+
 // Função para mostrar uma tela específica
 function showScreen(screen) {
   const screens = [homeScreen, challengeScreen, bossScreen, victoryScreen, defeatScreen];
@@ -31,3 +35,8 @@ scoreButton.addEventListener('click', () => {
 
 // Inicialmente mostra a tela inicial
 showScreen(homeScreen);
+
+  playButton.addEventListener('click', () => {
+    audio.play();
+  });
+  
