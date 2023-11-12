@@ -6,13 +6,10 @@ body, html {
     font-family: Arial, sans-serif;
   }
 
-  body > dialog{
-    display: flex;
-  }
   #game-container {
     display: grid;
     width: 400px;
-    background-color: rgb(186, 245, 225);
+    background-color: #F7DECD;
     height: 80%;
     margin: auto;
     margin-top: 100px;
@@ -42,6 +39,11 @@ body, html {
     font-size: small;
     text-align: center;
     padding: 5px;
+  }
+
+  #home-screen > img{
+    width: 130%;
+    height: 100%;
   }
 
   .screen {
