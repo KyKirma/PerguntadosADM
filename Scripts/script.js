@@ -1,4 +1,5 @@
 // Inicializa variáveis para controlar as telas
+const gameContainer = document.getElementById('game-container');
 const homeScreen = document.getElementById('home-screen');
 const challengeScreen = document.getElementById('challenge-screen');
 const instructionsScreen = document.getElementById('instructions-screen')
@@ -22,7 +23,20 @@ function showScreen(screen) {
   const screens = [homeScreen, challengeScreen, instructionsScreen, bossScreen, victoryScreen, defeatScreen];
   screens.forEach(s => s.classList.remove('active'));
   screen.classList.add('active');
+
+  setBackgroundImage(screen);
 }
+
+//Controle de Background
+const setBackgroundImage = (screen) => {
+  switch (screen) {
+    case bossScreen:
+      gameContainer.style.backgroundImage = "url('../Images/Backgrounds/BossBackground.png')";
+      break;
+    default:
+      gameContainer.style.backgroundImage = "url('../Images/Backgrounds/Background\ 57255_updated.jpg')";
+  }
+};
 
 // Adiciona event listeners para os botões
 playButton.addEventListener('click', () => showScreen(challengeScreen));
