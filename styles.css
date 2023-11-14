@@ -18,7 +18,7 @@ body, html {
   #game-container {
     display: grid;
     width: 400px;
-    background-image: url("./Images/Backgrounds/Background\ 57255.jpg");
+    background-image: url("./Images/Backgrounds/Background\ 57255_updated.jpg");
     background-size: cover;
     height: 80%;
     margin: auto;
@@ -27,7 +27,7 @@ body, html {
     border-radius: 20px;
     border: 5px inset rgb(0, 0, 0);
   }
-
+  
   #game-container > div{
     display: flex;
     flex-direction: column;
@@ -56,11 +56,17 @@ body, html {
     height: 100%;
   }
 
-  #challenge-screen > p{
+  #placa{
+    background-image: url("./Images/Placa.png");
+    background-size: cover;
+  }
+  
+  p, h2{
     padding-left: 30px;
     padding-right: 30px;
     text-align: center;
   }
+
   .screen {
     display: none;
     flex-direction: column;
