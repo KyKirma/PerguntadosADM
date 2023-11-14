@@ -16,7 +16,6 @@ const tryAgainButton = document.getElementById('try-again-button');
 
 // Inicializa os Audios
 const audio = document.getElementById("audio");
-const audioButton = document.getElementById('mute_button')
 
 // Função para mostrar uma tela específica
 function showScreen(screen) {
