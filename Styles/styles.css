@@ -18,7 +18,7 @@ body, html {
   #game-container {
     display: grid;
     width: 400px;
-    background-image: url("./Images/Backgrounds/Background\ 57255_updated.jpg");
+    background-image: url("../Images/Backgrounds/Background\ 57255_updated.jpg");
     background-size: cover;
     height: 80%;
     margin: auto;
