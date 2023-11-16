@@ -1,6 +1,6 @@
 const wheel = document.getElementById("wheel");
 const spinBtn = document.getElementById("spin-btn");
-const finalValue = document.getElementById("final-value");
+
 //Object that stores values of minimum and maximum angle for a value
 const rotationValues = [
   { minDegree: 0, maxDegree: 30, value: 2 },
@@ -65,7 +65,6 @@ const valueGenerator = (angleValue) => {
   for (let i of rotationValues) {
     //if the angleValue is between min and max then display it
     if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
-      finalValue.innerHTML = `<p>Value: ${i.value}</p>`;
       spinBtn.disabled = false;
       break;
     }
