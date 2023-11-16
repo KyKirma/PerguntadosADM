@@ -31,10 +31,10 @@ function showScreen(screen) {
 let setBackgroundImage = (screen) => {
   switch (screen) {
     case bossScreen:
-      gameContainer.style.backgroundImage = "url('../Images/BossBackground.png')";
+      gameContainer.style.backgroundImage = "url('./Images/BossBackground.png')";
       break;
     default:
-      gameContainer.style.backgroundImage = "url('../Images/MainBackground.jpg')";
+      gameContainer.style.backgroundImage = "url('./Images/MainBackground.jpg')";
   }
 };
 
