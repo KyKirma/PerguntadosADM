@@ -56,7 +56,7 @@ body, html {
   }
 
   #placa{
-    background-image: url("../Images/Placa.png");
+    background-image: url('../Images/Placa.png');
     background-size: cover;
     background-position: 1px 10px;
     background-repeat: no-repeat;
