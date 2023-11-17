@@ -66,6 +66,17 @@ html{
     padding: 2px;
   }
 
+  #player-lives{
+    display: flex;
+    justify-content: center;
+  }
+
+  #player-lives > img{
+    width: 3rem;
+    height: 3rem;
+    padding: 2px;
+  }
+
   p, h2{
     padding-left: 30px;
     padding-right: 30px;

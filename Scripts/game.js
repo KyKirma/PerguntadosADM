@@ -4,21 +4,30 @@ const perguntaDiv = document.getElementById("pergunta");
 const alternativasDiv = document.getElementById("alternativas");
 const resultadoDiv = document.getElementById("resultado");
 const proximaPerguntaBtn = document.getElementById("proximaPergunta");
+
 // Divs das vidas
 const bossLivesTela = document.getElementById("boss-lives");
 const bossLivesText = document.getElementById("boss-lives-text");
+const playerLivesTela = document.getElementById("player-lives");
 
 // Variáveis para armazenar informações do quiz
 let perguntas = [];
 let perguntasRespondidas = [];
 
 //Função que repagina a vida das entidades
-function atualizarVidas(bossLives){
+function atualizarVidas(bossLives, PlayerLives){
+    //Vida do boss
     bossLivesText.textContent = "Cachorros restantes: " + bossLives;
     for (let i = 0; i < bossLives; i++) {
         bossLivesTela.appendChild(document.createElement("img"));
         bossLivesTela.lastElementChild.src = "./Images/Cachorros.png";
-      }
+    }
+    //Vida do player
+    for (let i = 0; i < PlayerLives; i++) {
+        playerLivesTela.appendChild(document.createElement("img"));
+        playerLivesTela.lastElementChild.src = "./Images/Coracao.png";
+    }
+
 }
 
 // Função para sortear um tema e carregar perguntas correspondentes

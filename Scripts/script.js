@@ -71,7 +71,7 @@ continueButton.addEventListener('click', () => showScreen(instructionsScreen));
 startButton.addEventListener('click', () => {
   showScreen(bossScreen);
   setBossImage();
-  atualizarVidas(10);});
+  atualizarVidas(10, 3);});
 returnButton.addEventListener('click', () => showScreen(homeScreen));
 tryAgainButton.addEventListener('click', () => showScreen(homeScreen));
 scoreButton.addEventListener('click', () => {
