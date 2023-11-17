@@ -4,26 +4,25 @@ const perguntaDiv = document.getElementById("pergunta");
 const alternativasDiv = document.getElementById("alternativas");
 const resultadoDiv = document.getElementById("resultado");
 const proximaPerguntaBtn = document.getElementById("proximaPergunta");
+// Divs das vidas
+const bossLivesTela = document.getElementById("boss-lives");
+const bossLivesText = document.getElementById("boss-lives-text");
 
 // Variáveis para armazenar informações do quiz
 let perguntas = [];
 let perguntasRespondidas = [];
-let pontuacao = 0;
-let numeroPerguntas = 10; // Defina o número desejado de perguntas
-let perguntasCorretasParaVitoria = 10; // Agora são necessárias todas as perguntas corretas para ganhar
-let tentativasRestantes = 3; // Defina o número de tentativas permitidas
-let temaSorteado = "";  // Adiciona uma variável para armazenar o tema sorteado
+
+//Função que repagina a vida das entidades
+function atualizarVidas(bossLives){
+    bossLivesText.textContent = "Cachorros restantes: " + bossLives;
+    for (let i = 0; i < bossLives; i++) {
+        bossLivesTela.appendChild(document.createElement("img"));
+        bossLivesTela.lastElementChild.src = "./Images/Cachorros.png";
+      }
+}
 
 // Função para sortear um tema e carregar perguntas correspondentes
 function sortearETrocarTema() {
-    const temasDisponiveis = ["Liderança", "Controle", "Planejamento", "Organização", "Áreas Funcionais", "Sustentabilidade"];
-    
-    // Sorteia sempre um novo tema
-    temaSorteado = temasDisponiveis[Math.floor(Math.random() * temasDisponiveis.length)];
-
-    // Exibe o tema sorteado na caixa
-    temaBox.textContent = `Tema: ${temaSorteado}`;
-
     fetch(`perguntas_${temaSorteado}.json`)
         .then((response) => response.json())
         .then((data) => {
@@ -113,12 +112,18 @@ function mostrarResultado(vitoria) {
 
 // Função para iniciar o quiz ao clicar no botão "Iniciar Quiz"
 function iniciarQuiz() {
+    let pontuacao = 0;
+    let numeroPerguntas = 10; // Defina o número desejado de perguntas
+    let perguntasCorretasParaVitoria = 10; // Agora são necessárias todas as perguntas corretas para ganhar
+    let tentativasRestantes = 3; // Defina o número de tentativas permitidas
+    let temaSorteado = "";  // Adiciona uma variável para armazenar o tema sorteado
+    let bossLives = 10;
     sortearETrocarTema();
 }
 
 // Obtém referência e adiciona um evento de clique para o botão "Iniciar Quiz"
 const iniciarQuizBtn = document.getElementById("iniciarQuiz");
-iniciarQuizBtn.addEventListener("click", iniciarQuiz);
+
 
 // Obtém referência e adiciona um evento de clique para o botão "Próxima Pergunta"
-proximaPerguntaBtn.addEventListener("click", sortearEExibirPergunta);
+

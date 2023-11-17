@@ -1,3 +1,4 @@
+
 // Inicializa variáveis para controlar as telas
 const gameContainer = document.getElementById('game-container');
 const homeScreen = document.getElementById('home-screen');
@@ -21,9 +22,6 @@ const bossImage = document.getElementById('boss-image');
 // Inicializa os Audios
 const audio = document.getElementById("audio");
 
-// Inicializa os atributos das entidades
-let bossLives = 10;
-let PlayerLives = 3;
 
 // Função para mostrar uma tela específica
 function showScreen(screen) {
@@ -72,7 +70,8 @@ playButton.addEventListener('click', () => showScreen(challengeScreen));
 continueButton.addEventListener('click', () => showScreen(instructionsScreen));
 startButton.addEventListener('click', () => {
   showScreen(bossScreen);
-  setBossImage();});
+  setBossImage();
+  atualizarVidas(10);});
 returnButton.addEventListener('click', () => showScreen(homeScreen));
 tryAgainButton.addEventListener('click', () => showScreen(homeScreen));
 scoreButton.addEventListener('click', () => {

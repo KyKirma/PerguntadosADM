@@ -47,13 +47,6 @@ html{
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
-
-  #placa{
-    background-image: url('../Images/Placa.png');
-    background-size: cover;
-    background-position: 1px 10px;
-    background-repeat: no-repeat;
-  }
   
   #boss-image{
     width: 10rem;
@@ -63,6 +56,16 @@ html{
     background-size: cover;
   }
   
+  #boss-lives{
+    display: flex;
+  }
+
+  #boss-lives > img{
+    width: 2rem;
+    height: 2rem;
+    padding: 2px;
+  }
+
   p, h2{
     padding-left: 30px;
     padding-right: 30px;

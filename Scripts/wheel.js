@@ -32,7 +32,7 @@ let myChart = new Chart(wheel, {
   type: "pie",
   data: {
     //Labels(values which are to be displayed on chart)
-    labels: [1, 2, 3, 4, 5, 6],
+    labels: ["", "", "", "", "", ""],
     //Settings for dataset/pie
     datasets: [
       {
@@ -66,10 +66,36 @@ const valueGenerator = (angleValue) => {
     //if the angleValue is between min and max then display it
     if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
       spinBtn.disabled = false;
-      break;
+      return i.value;
     }
   }
 };
+
+//Função para o valor PURO pro game.js
+function finalValue(valor){
+  let resultado = "";
+  switch(valor){
+    case 1:
+      resultado = "areasfuncionais";
+      break;
+    case 2:
+      resultado = "controle";
+      break;
+    case 3:
+      resultado = "lideranca";
+      break;
+    case 4:
+      resultado = "organizacao";
+      break;
+    case 5:
+      resultado = "planejamento";
+      break;
+    default:
+      resultado = "areasfuncionais";
+      break;
+  }
+  return resultado;
+}
 
 //Spinner count
 let count = 0;
@@ -95,7 +121,8 @@ spinBtn.addEventListener("click", () => {
       resultValue -= 5;
       myChart.options.rotation = 0;
     } else if (count > 15 && myChart.options.rotation == randomDegree) {
-      valueGenerator(randomDegree);
+      let finalValuee = finalValue(valueGenerator(randomDegree));
+      console.log("Final Value:", finalValuee);
       clearInterval(rotationInterval);
       count = 0;
       resultValue = 101;
