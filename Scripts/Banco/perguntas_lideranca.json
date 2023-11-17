@@ -1,0 +1,193 @@
+[
+    {
+        "pergunta": "Qual das seguintes afirmações melhor caracteriza a diferença entre liderança transformacional e liderança transacional?",
+        "alternativas": [
+            " A liderança transformacional está centrada na clareza de papéis e tarefas, enquanto a liderança transacional se concentra na inspiração dos seguidores.",
+            " Líderes transformacionais são predominantemente carismáticos, enquanto líderes transacionais enfatizam metas estabelecidas.",
+            " Líderes transformacionais inspiram os seguidores a ultrapassarem seus interesses individuais para o benefício da organização, ao passo que líderes transacionais orientam os seguidores em direção a metas específicas.",
+            " A liderança transformacional é mais eficaz em lidar com questões individuais, enquanto a liderança transacional é mais voltada para alcançar objetivos de grupo."
+        ],
+        "resposta": "C"
+    },
+    
+    {
+        "pergunta": "Qual das seguintes características é uma particularidade que diferencia os líderes dos não-líderes?",
+        "alternativas": [
+            " Habilidade para seguir instruções.",
+            " Falta de autoconfiança.",
+            " Inteligência superior em todas as áreas.",
+            " Forte desejo de influenciar e liderar os outros."
+        ],
+        "resposta": "D"
+    },
+    
+    {
+        "pergunta": "Qual das seguintes características NÃO é uma qualidade essencial apresentada pelos líderes visionários, de acordo com o texto?",
+        "alternativas": [
+            "A) Habilidade de explicar a visão aos outros.",
+            "B) Habilidade de ampliar a visão para contextos diferentes de liderança.",
+            " Habilidade de expressar a visão apenas verbalmente.",
+            " Habilidade de expressar a visão pelo comportamento do líder."
+        ],
+        "resposta": "C"
+    },
+    
+    {
+        "pergunta": "Selecione, respectivamente, o que corresponde às particularidades que diferenciam os líderes dos não-líderes:",
+        "alternativas": [
+            " Impulso de liderança, Honestidade e integridade, Autossuficiência em esportes, Inteligência.",
+            " Impulso de liderança, Honestidade e integridade, Autoconfiança, Inteligência.",
+            " Preferência por música, Honestidade e integridade, Autoconfiança, Inteligência.",
+            " Impulso de liderança, Honestidade e integridade, Autoconfiança, Capacidade de cozinhar."
+        ],
+        "resposta": "B"
+    },
+    
+    {
+        "pergunta": "Qual dos estilos de liderança descritos permite que os funcionários tomem decisões e completem seus trabalhos da maneira que acharem correto?",
+        "alternativas": [
+            " Estilo autocrático.",
+            " Estilo democrático-consultivo.",
+            " Estilo democrático-participação.",
+            " Estilo laissez-faire."
+        ],
+        "resposta": "D"
+    },
+    
+    {
+        "pergunta": "Qual é o principal papel do controle na gestão de uma organização?",
+        "alternativas": [
+            " Garantir que os objetivos sejam alcançados.",
+            " Definir a visão de longo prazo da empresa.",
+            " Monitorar a eficiência das operações do dia a dia.",
+            " Estabelecer a estratégia de marketing da empresa."
+        ],
+        "resposta": "A"
+    },
+    
+   
+    
+    {
+        "pergunta": "Quais dos seguintes tipos de confiança são caracterizados pela previsibilidade comportamental que surge de um histórico de interação e não depende de repressão?",
+        "alternativas": [
+            " Confiança baseada na identificação",
+            " Confiança baseada na repressão",
+            " Confiança baseada no conhecimento",
+            " Confiança baseada na incerteza"
+        ],
+        "resposta": "C"
+    },
+    
+    {
+        "pergunta": "Qual é a importância do estilo de liderança de um indivíduo para o sucesso da liderança e quais são os três fatores situacionais identificados por Fiedler?",
+        "alternativas": [
+            " A importância do estilo de liderança não é relevante para o sucesso da liderança e Fiedler identificou os fatores situacionais como: comunicação, motivação e recursos.",
+            " O estilo de liderança de um indivíduo não influencia o sucesso da liderança e Fiedler identificou os fatores situacionais como: clima organizacional, tomada de decisão e cultura corporativa.",
+            " O estilo de liderança de um indivíduo é fundamental para o sucesso da liderança e Fiedler identificou os fatores situacionais como: relações líder-membro, poder das tarefas e poder de posição.",
+            " A importância do estilo de liderança é apenas parcial para o sucesso da liderança e Fiedler identificou os fatores situacionais como: estrutura organizacional, metas a longo prazo e interações equipe-líder."
+        ],
+        "resposta": "C"
+    },
+    
+    {
+        "pergunta": "Acima do modelo líder-participação, qual afirmação se adequa a ele?",
+        "alternativas": [
+            " É um modelo que diz um estilo de liderança baseado nas características do democrático com o laissez-faire.",
+            " É um modelo baseado em uma árvore de decisões que dita o estilo de liderança a ser tomado para aquela situação",
+            " É um modelo que o líder participa ativamente nas tarefas diárias dos subordinados.",
+            " É um modelo que diz que o líder deve adotar um estilo autocrático"
+        ],
+        "resposta": "B"
+    },
+    
+    {
+        "pergunta": "Qual abordagem teórica foi reconhecida por sua capacidade de isolar com sucesso as principais variáveis situacionais no estudo da liderança?",
+        "alternativas": [
+            " Modelo de Fiedler",
+            " Teoria caminho-meta",
+            " Modelo líder-participação",
+            " Teoria da liderança situacional de Hersey e Blanchard"
+        ],
+        "resposta": "B"
+    },
+    
+    {
+        "pergunta": "Considere a seguinte afirmação de Robbins: “Nem todos os líderes são gerentes, e nem todos os líderes são gerentes”. Qual sentença se adequa mais a essa afirmação?",
+        "alternativas": [
+            " Todos os líderes são gerentes. Tendo em vista que os líderes podem ser vistos como cargos de uma empresa, como gerente.",
+            " Nem todos os líderes são gerentes. Pois a liderança é um conjunto de características que define o quão bom uma pessoa é em planejar, organizar e controlar, podendo ser atribuído ao gerente ou não.",
+            " Todos os gerentes são líderes. Uma vez que para ser gerente é necessário ter as habilidades de planejar, organizar e controlar.",
+            " Líderes e gerentes são a mesma coisa. Já que, segundo o autor, os dois são vistos como sinônimos."
+        ],
+        "resposta": "B"
+    },
+    
+    {
+        "pergunta": "Em um ambiente corporativo, qual característica é fundamental para distinguir um líder visionário dos demais?",
+        "alternativas": [
+            " Capacidade de adaptação rápida às mudanças superficiais do mercado.",
+            " Concentração em maximizar lucros a curto prazo, sem considerar o impacto a longo prazo.",
+            " Perspectiva ampla que abrange não apenas metas atuais, mas também o potencial futuro e as tendências emergentes.",
+            " Priorização exclusiva das opiniões e feedbacks de acionistas, sem considerar outros stakeholders."
+        ],
+        "resposta": "C"
+    },
+    
+    {
+        "pergunta": "Qual das seguintes afirmações descreve corretamente o modelo líder-participação desenvolvido por Victor Vroom e Phillip Yetton em 1973?",
+        "alternativas": [
+            " O modelo sugere que o comportamento do líder deve ser consistente, independentemente da estrutura da tarefa.",
+            " O modelo líder-participação foi baseado na ideia de que líderes precisam tomar decisões sem considerar as opiniões dos membros da equipe.",
+            " O modelo propõe uma sequência de regras que determinam o grau e a quantidade de participação na tomada de decisão em diferentes situações, incorporando sete contingências.",
+            " O modelo foi revisado por Victor Vroom e Arthur Jago, resultando na remoção dos cinco estilos alternativos de liderança."
+        ],
+        "resposta": "C"
+    },
+    
+    
+    
+    {
+        "pergunta": "Ao considerar as dimensões fundamentais que compõem o conceito de confiança, qual delas é destacada como a mais crítica, sendo fundamental para tornar as outras dimensões significativas e eficazes?",
+        "alternativas": [
+            " Competência, envolvendo conhecimento técnico e interpessoal.",
+            " Consistência, relacionada à previsibilidade e ao bom julgamento.",
+            " Lealdade, expressa pela disposição de proteger e manter aparências.",
+            " Abertura, indicando a disposição de compartilhar toda a verdade."
+        ],
+        "resposta": "D"
+    },
+    
+    {
+        "pergunta": "Qual é uma das principais características do modelo líder-participação desenvolvido por Victor Vroom e Phillip Yetton?",
+        "alternativas": [
+            " Fornecer um conjunto fixo de regras para todas as situações de liderança.",
+            " Incluir cinco estilos de liderança, independentemente das circunstâncias.",
+            " Oferecer uma árvore de decisão com doze contingências que requerem escolhas 'sim' ou 'não'.",
+            " Limitar a participação do grupo na tomada de decisão, tornando-o fácil de aplicar no dia a dia."
+        ],
+        "resposta": "C"
+    },
+    
+    {
+        "pergunta": "Qual é a principal abordagem da teoria de liderança situacional de Hersey e Blanchard, e como ela sugere que os líderes devem adaptar seus estilos de liderança?",
+        "alternativas": [
+            " A teoria enfoca a importância da habilidade e motivação dos líderes, indicando que eles devem sempre manter um estilo diretivo.",
+            " A teoria se concentra nos seguidores, argumentando que os líderes devem ajustar seus estilos com base no nível de prontidão dos seguidores.",
+            " A teoria sugere que os líderes devem sempre adotar um estilo laissez-faire para promover a autonomia dos seguidores.",
+            " A teoria destaca que os líderes devem ser altamente autoritários, independentemente do nível de prontidão dos seguidores."
+        ],
+        "resposta": "B"
+    },
+    
+    {
+        "pergunta": "Acima do modelo líder-participação de Vroom, quantos tipos de estilo de liderança podem ser adotados nesse modelo?",
+        "alternativas": [
+            " 3, sendo que o líder escolha qualquer um entre eles.",
+            " 3, sendo que o líder se adapte entre eles.",
+            " 5, sendo que o líder escolha qualquer um entre eles.",
+            " 5, sendo que o líder se adapte entre eles."
+        ],
+        "resposta": "D"
+    }
+    
+]

@@ -1,0 +1,116 @@
+[
+    {
+        "pergunta": "O que é Organização na administração?",
+        "alternativas": [
+            " Organização na administração refere-se apenas à criação de fluxogramas.",
+            " Organização é a função da administração que cria a estrutura organizacional.",
+            " Organização na administração é responsável por cuidar das atividades de marketing da empresa.",
+            " Organização na administração envolve apenas a contratação de novos funcionários."
+        ],
+        "resposta": "B"
+    },
+    
+    {
+        "pergunta": "Segundo Robbins e Decenzo em 'Organização', qual é a principal diferença entre centralização e descentralização em uma estrutura organizacional?",
+        "alternativas": [
+            " A centralização envolve a concentração de autoridade no topo da hierarquia, enquanto a descentralização distribui a tomada de decisões para vários níveis da organização.",
+            " A centralização refere-se à delegação eficiente de responsabilidades, enquanto a descentralização se concentra na manutenção de uma cadeia de comando estrita.",
+            " Ambas centralização e descentralização implicam na mesma distribuição de autoridade, diferindo apenas na forma de comunicação interna.",
+            " A descentralização pressupõe a concentração exclusiva de poder nas mãos da alta administração, enquanto a centralização preconiza a divisão equitativa de responsabilidades."
+        ],
+        "resposta": "A"
+    },
+    
+    {
+        "pergunta": "Qual é um exemplo de especialização do trabalho mencionado no texto disponibilizado no livro: PROJETOS ORGANIZACIONAIS BÁSICOS?",
+        "alternativas": [
+            " Preparação de sanduíches Whopper no Burger King.",
+            " Cirurgiões cardíacos suturando pacientes.",
+            " Ampliação das atividades do cargo para aumentar a produtividade.",
+            " Adam Smith argumentando contra a especialização do trabalho no século XVIII."
+        ],
+        "resposta": "A"
+    },
+    
+    {
+        "pergunta": "O que é uma cultura organizacional?",
+        "alternativas": [
+            " Um conjunto de símbolos materiais em uma organização.",
+            " Um sistema de significados compartilhados que influenciam o comportamento dos membros da organização.",
+            " Práticas e rituais específicos em uma empresa.",
+            " Uma lista de valores individuais de funcionários."
+        ],
+        "resposta": "B"
+    },
+    
+    
+    
+    {
+        "pergunta": "De acordo com os diferentes tipos de poder. Qual das alternativas abaixo descreve o tipo de poder de Referência?",
+        "alternativas": [
+            " Envolve a capacidade de impor punições ou consequências negativas, como demissões, advertências ou advertências.",
+            " É o poder que uma pessoa detém devido à sua posição ou carga na posição da organização.",
+            " Este poder está relacionado à posse de conhecimentos, habilidades ou informações específicas que são úteis para a organização.",
+            " Esse tipo de poder ocorre quando as pessoas são influenciadas devido ao respeito, admiração ou identificação com alguém."
+        ],
+        "resposta": "D"
+    },
+    
+    {
+        "pergunta": "Qual das seguintes afirmações melhor descreve uma diferença fundamental entre uma organização mecanicista e uma organização orgânica, de acordo com o livro Fundamentos de Administração?",
+        "alternativas": [
+            " Em uma organização mecanicista, a tomada de decisão é centralizada e hierárquica, enquanto em uma organização orgânica, a tomada de decisão é descentralizada e colaborativa.",
+            " Numa organização mecanicista, a comunicação é principalmente horizontal, enquanto que numa organização orgânica, a comunicação é principalmente vertical.",
+            " Em uma organização mecanicista, a ênfase está na flexibilidade e adaptabilidade, enquanto em uma organização orgânica, a ênfase está na padronização de processos.",
+            " Numa organização mecanicista, os funcionários têm maior autonomia e capacitação, enquanto numa organização orgânica, a supervisão é mais rigorosa."
+        ],
+        "resposta": "A"
+    },
+    
+    {
+        "pergunta": "Qual diz a respeito das vantagens da especialização do trabalho?",
+        "alternativas": [
+            " Eficiência Aprimorada, Desenvolvimento de Habilidades Específicas e Facilita a Supervisão e o Treinamento.",
+            " Eficiência Aprimorada, Adaptabilidade e facilita o treinamento.",
+            " Eficiência Aprimorada, Monotonia das atividade e Desenvolvimento de Habilidades Específicas.",
+            " Monotonia e Desmotivação, Limitação da Criatividade e Dificuldade de Adaptação."
+        ],
+        "resposta": "A"
+    },
+    
+    {
+        "pergunta": "Qual é a estrutura organizacional incomum da Trufresh LLC e como essa abordagem beneficia a empresa em termos de flexibilidade e redução de custos?",
+        "alternativas": [
+            " A empresa tem um escritório central em Nova York.",
+            " A maioria dos proprietários da empresa trabalha no escritório de Connecticut.",
+            " A produção da empresa é realizada em Massachusetts.",
+            " A Trufresh LLC não possui um escritório central e opera com uma equipe de vendas enxuta e gerentes distribuídos em diferentes estados."
+        ],
+        "resposta": "D"
+    },
+    
+    
+    
+    {
+        "pergunta": "Considerando a relação entre cultura organizacional e estrutura, como a presença de uma cultura forte pode impactar a dinâmica de uma organização?",
+        "alternativas": [
+            " Culturas fortes, ao contrário das culturas fracas, resultam em maior necessidade de regras e regulamentos escritos para garantir consistência.",
+            " Em organizações com culturas fortes, a formalização de regras é redundante, pois a cultura internaliza as normas, proporcionando disciplina e previsibilidade.",
+            " Culturas fortes são propensas a gerar desordem devido à falta de orientações claras, exigindo intervenção constante dos gestores para manter a coesão.",
+            " Culturas organizacionais não têm impacto significativo na estrutura; a eficácia é estritamente determinada por regras formais e regulamentos."
+        ],
+        "resposta": "B"
+    },
+    
+    {
+        "pergunta": "Qual é a principal fonte de influência na formação da cultura de uma organização?",
+        "alternativas": [
+            " A cultura organizacional é determinada principalmente pela legislação governamental.",
+            " A cultura de uma organização surge da sabedoria coletiva dos funcionários mais antigos.",
+            " A cultura de uma organização é exclusivamente moldada pelo CEO atual.",
+            " A cultura de uma organização reflete a visão e preferências dos fundadores, bem como a experiência e aprendizado dos primeiros funcionários."
+        ],
+        "resposta": "D"
+    }
+    
+]

@@ -1,0 +1,90 @@
+[
+    {
+        "pergunta": "Qual a função principal da área financeira em uma organização?",
+        "alternativas": [
+            "Realizar investimentos em ações.",
+            "Assegurar um bom clima organizacional.",
+            "Gerir decisões de investimento, financiamento e pagamentos.",
+            "Coordenador de comunicação internacional."
+        ],
+        "resposta": "C"
+    },
+    
+    {
+        "pergunta": "Qual foi o evento histórico no Brasil que marcou o início da aplicação de técnicas da escola de relações humanas na gestão de pessoas?",
+        "alternativas": [
+            "O 'milagre econômico' na ditadura militar.",
+            "A crise do petróleo e da dívida externa na década de 1970.",
+            "O avanço da tecnologia e da informatização na gestão de pessoas.",
+            "A abertura para o capital estrangeiro durante o governo de Juscelino Kubitschek."
+        ],
+        "resposta": "D"
+    },
+    
+    {
+        "pergunta": "Qual tendência financeira reflete a crescente consideração do comportamento individual no processo de tomada de decisão econômica?",
+        "alternativas": [
+            "Aumento da regulação financeira internacional.",
+            "Crescimento das finanças comportamentais.",
+            "Diminuição da importância dos mercados emergentes.",
+            "Desenvolvimento de tecnologia blockchain."
+        ],
+        "resposta": "B"
+    },
+    
+    {
+        "pergunta": "Qual afirmação descreve uma característica contemporânea da função administrativa em organizações?",
+        "alternativas": [
+            "A função administrativa é exclusivamente responsável pela coordenação e equilíbrio das demais funções organizacionais.",
+            "A função administrativa é predominante nos níveis mais baixos da administração organizacional.",
+            "A função administrativa é distribuída por vários níveis hierárquicos, especializando-se em áreas específicas, como administração de operações e gestão de pessoas.",
+            "A função administrativa geral permanece estática e inalterada, independentemente do nível hierárquico na organização."
+        ],
+        "resposta": "C"
+    },
+    
+    {
+        "pergunta": "Qual é o principal requisito para o estabelecimento da transação e do relacionamento no contexto do marketing?",
+        "alternativas": [
+            "Localização estratégica da organização.",
+            "Variedade e qualidade dos produtos oferecidos.",
+            "Propaganda boca a boca positiva do cliente.",
+            "Perfil econômico do consumidor."
+        ],
+        "resposta": "B"
+    },
+    
+    {
+        "pergunta": "Com base nas tendências contemporâneas no campo de operações, quais das seguintes opções representam uma estratégia que as empresas podem adotar para se alinhar com as práticas sustentáveis ​​de produção?",
+        "alternativas": [
+            "Priorizar a produção em massa de produtos padronizados para maximizar a eficiência e minimizar custos.",
+            "Focar exclusivamente na automação do processo produtivo, eliminando o envolvimento do funcionário na qualidade do produto.",
+            "Desenvolver produtos com vida útil mais curta para estimular a economia através de compras repetidas.",
+            "Integrar considerações ambientais e de reciclagem desde a concepção do produto até o pós-consumo, refletindo uma visão sistêmica da cadeia produtiva."
+        ],
+        "resposta": "D"
+    },
+    
+    {
+        "pergunta": "Qual das seguintes afirmações melhor representa o conceito de equilíbrio na função de marketing, conforme descrito no texto?",
+        "alternativas": [
+            "O valor do produto deve sempre exceder o valor percebido pelo cliente para garantir a lucratividade.",
+            "O foco do marketing é maximizar o valor do produto, independentemente do custo.",
+            "Marketing busca equilibrar o valor do produto e o valor percebido pelo cliente para facilitar a troca.",
+            "A propaganda é uma ferramenta mais eficaz para inclinar a balança a favor da percepção de valor pelo cliente."
+        ],
+        "resposta": "C"
+    },
+    
+    {
+        "pergunta": "Qual é o papel do marketing na relação entre organização e cliente?",
+        "alternativas": [
+            "Manter relações eficazes entre a organização e seus clientes em diversos setores.",
+            "Aumentar a receita das organizações por meio de estratégias de marketing.",
+            "Estabelecer relações exclusivamente com organizações privadas.",
+            "Desenvolver campanhas publicitárias apenas para organizações sem fins lucrativos."
+        ],
+        "resposta": "A"
+    }
+    
+]

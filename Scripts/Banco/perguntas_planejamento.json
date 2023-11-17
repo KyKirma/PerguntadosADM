@@ -1,0 +1,149 @@
+[
+    {
+        "pergunta": "O que é planejamento?",
+        "alternativas": [
+            " Um processo de definir metas e objetivos, identificar recursos necessários e estabelecer um roteiro de ações para alcançar essas metas",
+            " Um jogo de azar no qual os participantes lançam dados para determinar as etapas de um plano, sem considerar lógica ou racionalidade",
+            " Um ritual místico que invoca poderes sobrenaturais para garantir o sucesso de um projeto",
+            " Um procedimento altamente burocrático e rígido que não leva em consideração mudanças ou imprevistos durante a execução, seguindo estritamente o plano original"
+        ],
+        "resposta": "A"
+    },
+    
+    {
+        "pergunta": "Qual é a principal diferença entre os planos estratégicos e os planos operacionais nas organizações?",
+        "alternativas": [
+            " Os planos estratégicos são criados por administradores de nível médio, enquanto os planos operacionais são criados por administradores de topo",
+            " Os planos estratégicos são projetados para cumprir os objetivos amplos da organização, enquanto os planos operacionais mostram como os planos estratégicos serão implementados no dia-a-dia",
+            " Os planos estratégicos são focados em metas de curto prazo, enquanto os planos operacionais se concentram em metas de longo prazo",
+            " Os planos estratégicos são desenvolvidos para lidar com situações de crise, enquanto os planos operacionais são voltados para o crescimento sustentável da organização"
+        ],
+        "resposta": "B"
+    },
+    
+    {
+        "pergunta": "Os objetivos são uma parte importante no processo de planejamento?",
+        "alternativas": [
+            " Sim. Os objetivos são importantes para entendermos como o planejamento será feito de forma geral, sem dar muita importância para onde vamos e como",
+            " Sim. Os objetivos proporcionam senso de direção, trazendo um foco e guiando nossos esforços para um único lugar, o que ajuda a avaliar se estamos indo para a direção certa, ou não",
+            " Não. Os objetivos servem apenas para uma satisfação pessoal, sendo apenas um prazer sem valor na parte técnica do planejamento em si",
+            " Não. Os objetivos são discutidos e analisados na fase do controle, não do planejamento"
+        ],
+        "resposta": "B"
+    },
+    
+    {
+        "pergunta": "De acordo com a Matriz BCG, qual é a principal característica de um produto ou unidade de negócios classificado como Estrela?",
+        "alternativas": [
+            " Possui baixa participação de mercado e gera alto crescimento de receita",
+            " Tem alta participação de mercado e opera em um mercado de crescimento lento",
+            " Gera baixa receita e tem baixa participação de mercado",
+            " Tem alta participação de mercado e opera em um mercado de alto crescimento"
+        ],
+        "resposta": "D"
+    },
+    
+    {
+        "pergunta": "Por que estabelecer objetivos é essencial para indivíduos e organizações?",
+        "alternativas": [
+            " Porque os objetivos são irrelevantes",
+            " Porque todos têm recursos ilimitados",
+            " Porque os objetivos fornecem direção e motivação",
+            " Porque a falta de objetivos é desejável"
+        ],
+        "resposta": "C"
+    },
+
+
+    {
+        "pergunta": "De acordo com Peter Drucker, quais são os critérios de eficácia e eficiência?",
+        "alternativas": [
+            " Eficácia se concentra na alocação eficaz de recursos, enquanto eficiência se refere a definição de objetivos adequados.",
+            " Eficácia refere-se a fazer as coisas certas, enquanto eficiência diz respeito a fazer as coisas da maneira certa.",
+            " Eficácia está relacionada a minimizar o desperdício, enquanto eficiência diz respeito a alcançar metas e objetivos.",
+            " Eficácia está relacionada a priorizar tarefas de acordo com a popularidade, enquanto eficiência se concentra em realizar as tarefas de maneira rápida, independentemente de sua importância."
+        ],
+        "resposta": "B"
+    },
+    
+    {
+        "pergunta": "Sobre o processo formal do planejamento, qual sentença se encaixa melhor no passo da análise de recursos?",
+        "alternativas": [
+            " Essa fase se resume em identificar as principais ameaças que o ambiente externo pode impactar na organização.",
+            " A etapa da análise diz a respeito da tomada de medidas corretivas sobre o andamento que a organização está tomando.",
+            " A análise de recursos envolve identificar as vantagens e desvantagens competitivas da organização, suas forças e fraquezas em relação aos competidores atuais e futuros.",
+            " Esse passo reforça a ideia de identificar hiatos de desempenho que a organização pode sofrer."
+        ],
+        "resposta": "C"
+    },
+    
+    {
+        "pergunta": "Qual é o princípio fundamental da abordagem de administração estratégica?",
+        "alternativas": [
+            " A realização das metas não está relacionada às políticas e à estratégia da organização.",
+            " O projeto geral de uma organização não depende da direção da empresa.",
+            " As atividades da organização são independentes das metas estabelecidas.",
+            " O projeto geral de uma organização depende da soma das metas, políticas e estratégias sob a direção da empresa."
+        ],
+        "resposta": "D"
+    },
+    
+    {
+        "pergunta": "Qual das seguintes categorias faz parte das Cinco Forças de Porter, um modelo amplamente utilizado para analisar a competição em um setor?",
+        "alternativas": [
+            " Análise SWOT.",
+            " Barganha de fornecedores.",
+            " Estratégia de marketing.",
+            " Desempenho financeiro."
+        ],
+        "resposta": "B"
+    },
+    
+    {
+        "pergunta": "Qual é o papel da estratégia de nível funcional em uma organização?",
+        "alternativas": [
+            " Criar um arcabouço para administrar funções como finanças, pesquisa e desenvolvimento e marketing de forma independente das estratégias de unidade de negócio.",
+            " Desenvolver estratégias específicas para cada área funcional, sem considerar a estratégia global da unidade de negócio.",
+            " Apoiar a estratégia de nível de unidade de negócio, formulando planos e direcionando áreas funcionais para alcançar objetivos específicos.",
+            " Ignorar as necessidades da estratégia de unidade de negócio, concentrando-se exclusivamente nas metas individuais de cada departamento."
+        ],
+        "resposta": "C"
+    },
+
+
+    {
+        "pergunta": "A Federal Express enfrentou desafios significativos em um mercado altamente competitivo. Qual foi a principal ameaça? E como a empresa planeja enfrentá-la?",
+        "alternativas": [
+            " A principal ameaça é a concorrência de empresas de telecomunicação como a MCI e a AT&T. A empresa planeja investir em inovação tecnológica para competir nesse mercado.",
+            " A principal ameaça é a competição direta do United Parcel Service (UPS), que oferece preços mais baixos. A empresa planeja reduzir seus preços para combater essa concorrência.",
+            " A principal ameaça é a entrada do 'Correio Expresso' no mercado de entregas overnight. A empresa planeja se especializar em produtos mais específicos para se diferenciar.",
+            " A principal ameaça é a demanda crescente por serviços de entrega internacional de documentos. A empresa planeja expandir sua presença global para atender a essa demanda."
+        ],
+        "resposta": "A"
+    },
+    
+    {
+        "pergunta": "Como as mudanças tecnológicas e a globalização afetaram o mercado de entregas de documentos, e qual é a abordagem da Federal Express para se adaptar a essas mudanças?",
+        "alternativas": [
+            " As mudanças tecnológicas e a globalização resultaram em uma demanda por entrega de documentos mais rápida e eficiente. A Federal Express planeja expandir sua presença internacional para atender a essa demanda.",
+            " As mudanças tecnológicas e a globalização tornaram as cartas comerciais obsoletas, com empresas buscando entregas de documentos em questão de horas. A Federal Express está focada em melhorar seus serviços de entrega expressa.",
+            " As mudanças tecnológicas e a globalização impactaram negativamente o mercado de entregas de documentos, levando a uma diminuição na demanda. A Federal Express planeja diversificar seus serviços para se adaptar a essa nova realidade.",
+            " As mudanças tecnológicas e a globalização não afetaram significativamente o mercado de entregas de documentos, de acordo com o texto. A Federal Express está confiante em sua posição atual e não planeja mudanças substanciais."
+        ],
+        "resposta": "B"
+    },
+    
+    {
+        "pergunta": "Em um contexto estratégico, qual é a principal implicação da hipótese de Porter em relação às forças competitivas em um setor de negócios?",
+        "alternativas": [
+            " Aumentar as forças no setor leva a retornos mais elevados.",
+            " Forças competitivas não influenciam os resultados médios.",
+            " Quanto maiores as forças, menores os retornos médios.",
+            " O sucesso estratégico depende exclusivamente da competição com grandes compradores."
+        ],
+        "resposta": "C"
+    }
+    
+    
+    
+]
