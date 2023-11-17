@@ -15,8 +15,15 @@ const startButton = document.getElementById('start-button');
 const returnButton = document.getElementById('return-button');
 const tryAgainButton = document.getElementById('try-again-button');
 
+// Inicializa os sprites
+const bossImage = document.getElementById('boss-image');
+
 // Inicializa os Audios
 const audio = document.getElementById("audio");
+
+// Inicializa os atributos das entidades
+let bossLives = 10;
+let PlayerLives = 3;
 
 // Função para mostrar uma tela específica
 function showScreen(screen) {
@@ -25,6 +32,28 @@ function showScreen(screen) {
   screen.classList.add('active');
 
   setBackgroundImage(screen);
+}
+
+//Função que gera um boss aleatório
+function setBossImage(){
+  let x = Math.floor(Math.random() * 4) + 1;
+  console.log(x);
+  switch(x){
+    case 1:
+      bossImage.style.backgroundImage = "url('./Images/Boss1.jpeg')";
+      break;
+    case 2:
+      bossImage.style.backgroundImage = "url('./Images/Boss2.jpeg')";
+      break;
+    case 3:
+      bossImage.style.backgroundImage = "url('./Images/Boss3.jpeg')";
+      break;
+    case 4:
+      bossImage.style.backgroundImage = "url('./Images/Boss4.jpeg')";
+      break;
+    default:
+
+  }
 }
 
 //Controle de Background
@@ -41,7 +70,9 @@ let setBackgroundImage = (screen) => {
 // Adiciona event listeners para os botões
 playButton.addEventListener('click', () => showScreen(challengeScreen));
 continueButton.addEventListener('click', () => showScreen(instructionsScreen));
-startButton.addEventListener('click', () => showScreen(bossScreen));
+startButton.addEventListener('click', () => {
+  showScreen(bossScreen);
+  setBossImage();});
 returnButton.addEventListener('click', () => showScreen(homeScreen));
 tryAgainButton.addEventListener('click', () => showScreen(homeScreen));
 scoreButton.addEventListener('click', () => {
@@ -52,7 +83,7 @@ scoreButton.addEventListener('click', () => {
 // Inicialmente mostra a tela inicial
 showScreen(homeScreen);
 
-  playButton.addEventListener('click', () => {
+playButton.addEventListener('click', () => {
     audio.play();
   });
   

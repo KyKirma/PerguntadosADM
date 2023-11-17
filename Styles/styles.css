@@ -62,6 +62,14 @@ body, html {
     background-repeat: no-repeat;
   }
   
+  #boss-image{
+    width: 10rem;
+    height: 10rem;
+    border: 5px inset var(--color1);
+    border-radius: 20%;
+    background-size: cover;
+  }
+  
   p, h2{
     padding-left: 30px;
     padding-right: 30px;
