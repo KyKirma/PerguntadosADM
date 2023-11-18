@@ -3,14 +3,21 @@ const bossLivesTela = document.getElementById("boss-lives");
 const bossLivesText = document.getElementById("boss-lives-text");
 const playerLivesTela = document.getElementById("player-lives");
 
-// Variáveis para armazenar informações do quiz
 
+// Botões das alternativas
+const altButton1 = document.getElementById("alt1");
+const altButton2 = document.getElementById("alt2");
+const altButton3 = document.getElementById("alt3");
+const altButton4 = document.getElementById("alt4");
+
+// Variáveis para armazenar informações do quiz
 let perguntasRespondidas = [];
 let pontuacao = 0;
 let numeroPerguntas = 10; // Defina o número desejado de perguntas
 let tentativasRestantes = 3; // Defina o número de tentativas permitidas
 let bossLives = 10;
 let alternativa;
+let pergunta;
 
 
 //Função que repagina a vida das entidades
@@ -37,7 +44,7 @@ function atualizarVidas(bossLives, PlayerLives) {
 function atualizarPergunta(temaSorteado) {
     questionLabel.textContent = "";
     questionAlternatives.textContent = "";
-    
+
     fetch(`./Scripts/Banco/perguntas_${temaSorteado}.json`)
         .then((response) => response.json())
         .then((data) => {
@@ -49,41 +56,68 @@ function atualizarPergunta(temaSorteado) {
         // Exibe a pergunta e as alternativas
         questionLabel.textContent = pergunta.pergunta;
 
-        const alternativas = pergunta.alternativas;
+        let alternativas = pergunta.alternativas;
 
         for (let i = 0; i < alternativas.length; i++) {
-            // Cria botões para cada alternativa
-            alternativa = document.createElement("button");
-            alternativa.innerHTML = String.fromCharCode(65 + i) + ") " + alternativas[i];
-            alternativa.addEventListener("click", () => {
-                alternativa.checked = true;
-                for (let j = 0; j < alternativas.length; j++) {
-                    if (i !== j) {
-                        alternativas[j].checked = false;
-                    }
-                }
-            });
-            questionAlternatives.appendChild(alternativa);
-        }
-
-        questionButton.addEventListener("click", () => {
-            if(alternativa.textContent.charAt(0) === pergunta.resposta){
-                pontuacao++;
-                bossLives--;
-                console.log(pontuacao);
-                console.log(bossLives);
-            } else {
-                tentativasRestantes--;
-                console.log(tentativasRestantes);
+            // Adiciona o botão à div correta
+            switch (i) {
+                case 0:
+                    altButton1.textContent = String.fromCharCode(65 + i) + ") " + alternativas[i];
+                    break;
+                case 1:
+                    altButton2.textContent = String.fromCharCode(65 + i) + ") " + alternativas[i];
+                    break;
+                case 2:
+                    altButton3.textContent = String.fromCharCode(65 + i) + ") " + alternativas[i];
+                    break;
+                case 3:
+                    altButton4.textContent = String.fromCharCode(65 + i) + ") " + alternativas[i];
+                    break;
             }
-            showScreen(bossScreen);
-            atualizarVidas(bossLives, tentativasRestantes);
-        });
+        }
     });
 }
 
 
+questionButton.addEventListener("click", () => {
+    // Verifica se a alternativa marcada é a resposta correta
+    if (alternativa.innerText.charAt(0) === pergunta.resposta) {
+        pontuacao++;
+        bossLives--;
+        console.log(pontuacao);
+        console.log(bossLives);
+    } else {
+        tentativasRestantes--;
+        console.log(tentativasRestantes);
+    }
 
+    showScreen(bossScreen);
+    atualizarVidas(bossLives, tentativasRestantes);
+});
+
+function handleClick(event) {
+    // Obtém o botão que foi clicado
+    const button = event.target;
+  
+    button.checked = true;
+    button.style.backgroundColor = "#7fffd4";
+    button.style.color = "#ffffff";
+
+    for (let i = 1; i < 5; i++) {
+      const otherButton = document.getElementById("alt" + i);
+      if (button !== otherButton) {
+        otherButton.checked = false;
+        otherButton.style.backgroundColor = "#ffffff";
+        otherButton.style.color = "#15ab7c";
+      }
+    }
+  }
+  
+  // Associa o evento click ao botão
+  altButton1.addEventListener("click", handleClick);
+  altButton2.addEventListener("click", handleClick);
+  altButton3.addEventListener("click", handleClick);
+  altButton4.addEventListener("click", handleClick);
 
 // Função para mostrar o resultado final do quiz
 function mostrarResultado(vitoria) {
