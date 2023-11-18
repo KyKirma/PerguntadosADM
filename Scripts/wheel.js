@@ -126,8 +126,13 @@ spinBtn.addEventListener("click", () => {
       clearInterval(rotationInterval);
       count = 0;
       resultValue = 101;
-
+      
       pergunta(finalValuee);
+
+      setTimeout(() => {
+        showScreen(questionScreen);
+      }, 3000);
+      
     }
   }, 10);
 });

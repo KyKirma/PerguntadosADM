@@ -1,17 +1,10 @@
-// Obtém referências para os elementos HTML relevantes
-const temaBox = document.getElementById("temaBox");
-const perguntaDiv = document.getElementById("pergunta");
-const alternativasDiv = document.getElementById("alternativas");
-const resultadoDiv = document.getElementById("resultado");
-const proximaPerguntaBtn = document.getElementById("proximaPergunta");
-
 // Divs das vidas
 const bossLivesTela = document.getElementById("boss-lives");
 const bossLivesText = document.getElementById("boss-lives-text");
 const playerLivesTela = document.getElementById("player-lives");
 
 // Variáveis para armazenar informações do quiz
-let perguntas = [];
+
 let perguntasRespondidas = [];
 
 //Função que repagina a vida das entidades
@@ -37,45 +30,33 @@ function pergunta(temaSorteado) {
         .then((data) => {
             perguntas = data;
             const randomIndex = Math.floor(Math.random() * perguntas.length);
-            console.log(perguntas[randomIndex])
-            return perguntas[randomIndex];
-        });
-}
-
-// Função para sortear e exibir uma pergunta
-function sortearEExibirPergunta() {
-    if (perguntas.length > 0 && tentativasRestantes > 0 && perguntasRespondidas.length < numeroPerguntas) {
-        const indiceSorteado = Math.floor(Math.random() * perguntas.length);
-        const perguntaSorteada = perguntas.splice(indiceSorteado, 1)[0];
-        perguntasRespondidas.push(perguntaSorteada);
-
+            pergunta = perguntas[randomIndex];
+            console.log(pergunta)
+            perguntasRespondidas.push(pergunta);
         // Exibe a pergunta e as alternativas
-        perguntaDiv.textContent = perguntaSorteada.pergunta;
-        alternativasDiv.innerHTML = "";
+        questionLabel.textContent = pergunta.pergunta;
 
-        const alternativas = perguntaSorteada.alternativas;
+        const alternativas = pergunta.alternativas;
 
         for (let i = 0; i < alternativas.length; i++) {
             // Cria botões para cada alternativa
             const alternativa = document.createElement("button");
             alternativa.textContent = String.fromCharCode(65 + i) + ") " + alternativas[i];
-            alternativa.addEventListener("click", () => verificarResposta(alternativa.textContent, perguntaSorteada.resposta));
-            alternativasDiv.appendChild(alternativa);
+            alternativa.addEventListener("click", () => {
+                alternativa.checked = true;
+                for (let j = 0; j < alternativas.length; j++) {
+                    if (i !== j) {
+                        alternativas[j].checked = false;
+                    }
+                }
+            });
+            questionAlternatives.appendChild(alternativa);
         }
-
-        resultadoDiv.textContent = "";
-    } else {
-        if (perguntasRespondidas.length === numeroPerguntas) {
-            mostrarResultado(pontuacao >= perguntasCorretasParaVitoria);
-        } else {
-            pergunta(); // Sorteia um novo tema antes de exibir a próxima pergunta
-            sortearEExibirPergunta(); // Exibe a próxima pergunta
-        }
-
-        // Desabilita o botão para a próxima pergunta após o resultado final
-        proximaPerguntaBtn.disabled = true;
-    }
+    });
 }
+
+// Função para sortear e exibir uma pergunta
+
 
 // Função para verificar a resposta selecionada pelo usuário
 function verificarResposta(respostaSelecionada, respostaCorreta) {

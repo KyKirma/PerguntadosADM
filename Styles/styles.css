@@ -126,3 +126,13 @@ html{
     border: 2px solid var(--color3);
     color: white;
   }
+
+  button:checked{
+    background-color: aquamarine;
+    color: white;
+  }
+
+  button:focus {
+    background-color: cadetblue;
+    color: white;
+  }
