@@ -16,7 +16,7 @@ const continueButton = document.getElementById('continue-button');
 const startButton = document.getElementById('start-button');
 const returnButton = document.getElementById('return-button');
 const tryAgainButton = document.getElementById('try-again-button');
-const submitButton = document.getElementById('submit-button');
+const questionButton = document.getElementById('question-button');
 
 // Inicializa os sprites
 const bossImage = document.getElementById('boss-image');
@@ -41,7 +41,6 @@ function showScreen(screen) {
 //Função que gera um boss aleatório
 function setBossImage(){
   let x = Math.floor(Math.random() * 4) + 1;
-  console.log(x);
   switch(x){
     case 1:
       bossImage.style.backgroundImage = "url('./Images/Boss1.jpeg')";

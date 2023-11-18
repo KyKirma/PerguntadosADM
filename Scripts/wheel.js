@@ -65,7 +65,7 @@ const valueGenerator = (angleValue) => {
   for (let i of rotationValues) {
     //if the angleValue is between min and max then display it
     if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
-      spinBtn.disabled = false;
+      
       return i.value;
     }
   }
@@ -127,12 +127,16 @@ spinBtn.addEventListener("click", () => {
       count = 0;
       resultValue = 101;
       
-      pergunta(finalValuee);
+      gerarPergunta(finalValuee);
 
       setTimeout(() => {
         showScreen(questionScreen);
+        spinBtn.disabled = false;
       }, 3000);
-      
     }
   }, 10);
 });
+
+function gerarPergunta(tema){
+  atualizarPergunta(tema);
+}

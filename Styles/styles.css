@@ -11,6 +11,17 @@ html{
     --color2: #15ab7c;
     --color3: #052c1f;
   }
+
+  .screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .screen.active {
+    display: flex;
+  }
+  
   #game-container {
     display: grid;
     background-size: cover;
@@ -87,16 +98,17 @@ html{
     font-size: 16px;
   }
 
-  .screen {
-    display: none;
-    flex-direction: column;
-    align-items: center;
+  input {
+    padding: 12px 50px;
+    margin: 2px;
+    background-color: rgb(207, 162, 252)52;
+    border: 2px solid var(--color1);
+    border-radius: 20px;
+    color: var(--color2);
+    font-size: 16px;
+    text-align: center;
   }
-  
-  .screen.active {
-    display: flex;
-  }
- 
+
   button {
     padding: 12px 90px;
     margin: 2px;
@@ -108,17 +120,6 @@ html{
     cursor: pointer;
     outline: none;
     transition: background-color 0.3s, color 0.3s;
-  }
-
-  input {
-    padding: 12px 50px;
-    margin: 2px;
-    background-color: rgb(207, 162, 252)52;
-    border: 2px solid var(--color1);
-    border-radius: 20px;
-    color: var(--color2);
-    font-size: 16px;
-    text-align: center;
   }
 
   button:hover {

@@ -6,25 +6,38 @@ const playerLivesTela = document.getElementById("player-lives");
 // Variáveis para armazenar informações do quiz
 
 let perguntasRespondidas = [];
+let pontuacao = 0;
+let numeroPerguntas = 10; // Defina o número desejado de perguntas
+let tentativasRestantes = 3; // Defina o número de tentativas permitidas
+let bossLives = 10;
+let alternativa;
+
 
 //Função que repagina a vida das entidades
-function atualizarVidas(bossLives, PlayerLives){
-    //Vida do boss
+function atualizarVidas(bossLives, PlayerLives) {
+    // Vida do boss
     bossLivesText.textContent = "Cachorros restantes: " + bossLives;
+    bossLivesTela.textContent = "";
     for (let i = 0; i < bossLives; i++) {
-        bossLivesTela.appendChild(document.createElement("img"));
-        bossLivesTela.lastElementChild.src = "./Images/Cachorros.png";
+      const bossLifeImage = document.createElement("img");
+      bossLifeImage.src = "./Images/Cachorros.png";
+      bossLivesTela.appendChild(bossLifeImage);
     }
-    //Vida do player
+  
+    // Vida do player
+    playerLivesTela.textContent = "";
     for (let i = 0; i < PlayerLives; i++) {
-        playerLivesTela.appendChild(document.createElement("img"));
-        playerLivesTela.lastElementChild.src = "./Images/Coracao.png";
+      const playerLifeImage = document.createElement("img");
+      playerLifeImage.src = "./Images/Coracao.png";
+      playerLivesTela.appendChild(playerLifeImage);
     }
-
-}
+  }
 
 // Função para sortear um tema e carregar perguntas correspondentes
-function pergunta(temaSorteado) {
+function atualizarPergunta(temaSorteado) {
+    questionLabel.textContent = "";
+    questionAlternatives.textContent = "";
+    
     fetch(`./Scripts/Banco/perguntas_${temaSorteado}.json`)
         .then((response) => response.json())
         .then((data) => {
@@ -40,8 +53,8 @@ function pergunta(temaSorteado) {
 
         for (let i = 0; i < alternativas.length; i++) {
             // Cria botões para cada alternativa
-            const alternativa = document.createElement("button");
-            alternativa.textContent = String.fromCharCode(65 + i) + ") " + alternativas[i];
+            alternativa = document.createElement("button");
+            alternativa.innerHTML = String.fromCharCode(65 + i) + ") " + alternativas[i];
             alternativa.addEventListener("click", () => {
                 alternativa.checked = true;
                 for (let j = 0; j < alternativas.length; j++) {
@@ -52,41 +65,25 @@ function pergunta(temaSorteado) {
             });
             questionAlternatives.appendChild(alternativa);
         }
+
+        questionButton.addEventListener("click", () => {
+            if(alternativa.textContent.charAt(0) === pergunta.resposta){
+                pontuacao++;
+                bossLives--;
+                console.log(pontuacao);
+                console.log(bossLives);
+            } else {
+                tentativasRestantes--;
+                console.log(tentativasRestantes);
+            }
+            showScreen(bossScreen);
+            atualizarVidas(bossLives, tentativasRestantes);
+        });
     });
 }
 
-// Função para sortear e exibir uma pergunta
 
 
-// Função para verificar a resposta selecionada pelo usuário
-function verificarResposta(respostaSelecionada, respostaCorreta) {
-    proximaPerguntaBtn.disabled = true; // Desabilita o botão enquanto exibe o feedback
-
-    if (respostaSelecionada.charAt(0) === respostaCorreta) {
-        // Feedback para resposta correta
-        resultadoDiv.textContent = "Resposta correta!";
-        pontuacao++;
-    } else {
-        // Feedback para resposta incorreta e atualização do número de tentativas restantes
-        resultadoDiv.textContent = "Resposta incorreta.";
-        tentativasRestantes--;
-
-        // Finaliza o quiz se o número de tentativas restantes atingir zero
-        if (tentativasRestantes === 0) {
-            mostrarResultado(false); // O jogador perdeu
-            return;
-        }
-    }
-
-    // Verifica se atingiu o limite de perguntas
-    if (perguntasRespondidas.length === numeroPerguntas) {
-        mostrarResultado(pontuacao >= perguntasCorretasParaVitoria);
-        return;
-    }
-
-    // Habilita o botão para a próxima pergunta após exibir o feedback
-    proximaPerguntaBtn.disabled = false;
-}
 
 // Função para mostrar o resultado final do quiz
 function mostrarResultado(vitoria) {
@@ -100,11 +97,5 @@ function mostrarResultado(vitoria) {
 
 // Função para iniciar o quiz
 function iniciarQuiz() {
-    let pontuacao = 0;
-    let numeroPerguntas = 10; // Defina o número desejado de perguntas
-    let perguntasCorretasParaVitoria = 10; // Agora são necessárias todas as perguntas corretas para ganhar
-    let tentativasRestantes = 3; // Defina o número de tentativas permitidas
-    let temaSorteado = "";  // Adiciona uma variável para armazenar o tema sorteado
-    let bossLives = 10;
-    pergunta();
+    
 }
