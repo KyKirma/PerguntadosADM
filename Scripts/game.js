@@ -31,16 +31,14 @@ function atualizarVidas(bossLives, PlayerLives){
 }
 
 // Função para sortear um tema e carregar perguntas correspondentes
-function sortearETrocarTema() {
-    fetch(`perguntas_${temaSorteado}.json`)
+function pergunta(temaSorteado) {
+    fetch(`./Scripts/Banco/perguntas_${temaSorteado}.json`)
         .then((response) => response.json())
         .then((data) => {
             perguntas = data;
-            perguntasRespondidas = [];
-            pontuacao = 0;
-            tentativasRestantes = 3; // Reinicia o número de tentativas
-            proximaPerguntaBtn.disabled = false; // Habilita o botão para a próxima pergunta
-            sortearEExibirPergunta();
+            const randomIndex = Math.floor(Math.random() * perguntas.length);
+            console.log(perguntas[randomIndex])
+            return perguntas[randomIndex];
         });
 }
 
@@ -70,7 +68,7 @@ function sortearEExibirPergunta() {
         if (perguntasRespondidas.length === numeroPerguntas) {
             mostrarResultado(pontuacao >= perguntasCorretasParaVitoria);
         } else {
-            sortearETrocarTema(); // Sorteia um novo tema antes de exibir a próxima pergunta
+            pergunta(); // Sorteia um novo tema antes de exibir a próxima pergunta
             sortearEExibirPergunta(); // Exibe a próxima pergunta
         }
 
@@ -119,7 +117,7 @@ function mostrarResultado(vitoria) {
     proximaPerguntaBtn.disabled = true;
 }
 
-// Função para iniciar o quiz ao clicar no botão "Iniciar Quiz"
+// Função para iniciar o quiz
 function iniciarQuiz() {
     let pontuacao = 0;
     let numeroPerguntas = 10; // Defina o número desejado de perguntas
@@ -127,12 +125,5 @@ function iniciarQuiz() {
     let tentativasRestantes = 3; // Defina o número de tentativas permitidas
     let temaSorteado = "";  // Adiciona uma variável para armazenar o tema sorteado
     let bossLives = 10;
-    sortearETrocarTema();
+    pergunta();
 }
-
-// Obtém referência e adiciona um evento de clique para o botão "Iniciar Quiz"
-const iniciarQuizBtn = document.getElementById("iniciarQuiz");
-
-
-// Obtém referência e adiciona um evento de clique para o botão "Próxima Pergunta"
-
