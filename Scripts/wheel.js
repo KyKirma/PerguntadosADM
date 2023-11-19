@@ -91,7 +91,10 @@ function finalValue(valor){
       resultado = "planejamento";
       break;
     default:
-      resultado = "areasfuncionais";
+      const numeroAleatorio = Math.floor(Math.random() * 5) + 1;
+      // Obtém o tema correspondente ao número aleatório
+      const tema = ["areasfuncionais", "controle", "lideranca", "organizacao", "planejamento"][numeroAleatorio - 1];
+      resultado = tema;
       break;
   }
   return resultado;

@@ -41,42 +41,48 @@ function atualizarVidas(bossLives, PlayerLives) {
 
 // Função para sortear um tema e carregar perguntas correspondentes
 function atualizarPergunta(temaSorteado) {
-    questionLabel.textContent = "";
-    questionAlternatives.textContent = "";
+  questionLabel.textContent = "";
+  questionAlternatives.textContent = "";
 
-    fetch(`./Scripts/Banco/perguntas_${temaSorteado}.json`)
-        .then((response) => response.json())
-        .then((data) => {
-            perguntas = data;
-            const randomIndex = Math.floor(Math.random() * perguntas.length);
-            pergunta = perguntas[randomIndex];
-            console.log(pergunta)
-            perguntasRespondidas.push(pergunta);
-        // Exibe a pergunta e as alternativas
-        questionLabel.textContent = pergunta.pergunta;
+  // Remove a classe anterior
+  questionLabel.classList.forEach((classe) => {
+    questionLabel.classList.remove(classe);
+});
 
-        let alternativas = pergunta.alternativas;
+  fetch(`./Scripts/Banco/perguntas_${temaSorteado}.json`)
+      .then((response) => response.json())
+      .then((data) => {
+          perguntas = data;
+          const randomIndex = Math.floor(Math.random() * perguntas.length);
+          pergunta = perguntas[randomIndex];
+          console.log(pergunta)
+          perguntasRespondidas.push(pergunta);
+      // Exibe a pergunta e as alternativas
+      questionLabel.textContent = pergunta.pergunta;
+      let alternativas = pergunta.alternativas;
 
-        for (let i = 0; i < alternativas.length; i++) {
-            // Adiciona o botão à div correta
-            switch (i) {
-                case 0:
-                    altButton1.textContent = String.fromCharCode(65 + i) + ") " + alternativas[i];
-                    break;
-                case 1:
-                    altButton2.textContent = String.fromCharCode(65 + i) + ") " + alternativas[i];
-                    break;
-                case 2:
-                    altButton3.textContent = String.fromCharCode(65 + i) + ") " + alternativas[i];
-                    break;
-                case 3:
-                    altButton4.textContent = String.fromCharCode(65 + i) + ") " + alternativas[i];
-                    break;
+      for (let i = 0; i < alternativas.length; i++) {
+          // Adiciona o botão à div correta
+          switch (i) {
+              case 0:
+                  altButton1.textContent = String.fromCharCode(65 + i) + ") " + alternativas[i];
+                  break;
+              case 1:
+                  altButton2.textContent = String.fromCharCode(65 + i) + ") " + alternativas[i];
+                  break;
+              case 2:
+                  altButton3.textContent = String.fromCharCode(65 + i) + ") " + alternativas[i];
+                  break;
+              case 3:
+                  altButton4.textContent = String.fromCharCode(65 + i) + ") " + alternativas[i];
+                  break;
             }
-        }
-    });
-}
+      }
 
+      // Adiciona a classe ao elemento questionLabel
+      questionLabel.classList.add(temaSorteado);
+  });
+}
 
 function getCheckedButton() {
     const buttons = document.querySelectorAll("button");
@@ -147,13 +153,3 @@ function handleClick(event) {
   altButton2.addEventListener("click", handleClick);
   altButton3.addEventListener("click", handleClick);
   altButton4.addEventListener("click", handleClick);
-
-// Função para mostrar o resultado final do quiz
-function mostrarResultado(vitoria) {
-    perguntaDiv.textContent = vitoria ? "Você ganhou o Quiz!" : "Você perdeu o Quiz!";
-    alternativasDiv.innerHTML = "";
-    resultadoDiv.textContent = vitoria ? `Pontuação: ${pontuacao} de ${numeroPerguntas}` : "Você não atingiu a pontuação mínima.";
-
-    // Desabilita o botão para a próxima pergunta após o resultado final
-    proximaPerguntaBtn.disabled = true;
-}

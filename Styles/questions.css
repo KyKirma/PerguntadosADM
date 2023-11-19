@@ -1,0 +1,26 @@
+#question-label{
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 20px;
+  }
+
+#question-label.areasfuncionais{
+    background-color: #fb391e;
+}
+
+#question-label.controle{
+    background-color: #fa6300;
+}
+
+#question-label.lideranca{
+    background-color: #fb8ba5;
+}
+
+#question-label.organizacao{
+    background-color: #189b21;
+}
+
+#question-label.planejamento{
+    background-color: #0763de;
+}
