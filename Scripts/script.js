@@ -11,6 +11,7 @@ const questionScreen = document.getElementById('question-screen');
 
 // Inicializa variáveis para controlar botões
 const playButton = document.getElementById('play-button');
+const scoreScreen = document.getElementById('score-screen');
 const scoreButton = document.getElementById('score-button');
 const continueButton = document.getElementById('continue-button');
 const startButton = document.getElementById('start-button');
@@ -80,8 +81,84 @@ startButton.addEventListener('click', () => {
 returnButton.addEventListener('click', () => showScreen(homeScreen));
 tryAgainButton.addEventListener('click', () => showScreen(homeScreen));
 scoreButton.addEventListener('click', () => {
-  // Aqui você deve implementar a funcionalidade para mostrar o score
-  alert('Funcionalidade de score ainda não implementada.');
+
+
+// Função para exibir as pontuações
+function mostrarPontuacoes() {
+  const pontuacoes = JSON.parse(localStorage.getItem('pontuacoes')) || [];
+  const listaPontuacoes = document.getElementById('score-list');
+  
+  // Limpa a lista de pontuações existente
+  listaPontuacoes.innerHTML = '';
+
+  // Ordena as pontuações em ordem decrescente
+  pontuacoes.sort((a, b) => b.pontuacao - a.pontuacao);
+
+  // Cria e adiciona cada pontuação como um item da lista
+  pontuacoes.forEach(pontuacao => {
+    const elementoPontuacao = document.createElement('li');
+    elementoPontuacao.textContent = `${pontuacao.nome}: ${pontuacao.pontuacao}`;
+    listaPontuacoes.appendChild(elementoPontuacao);
+  });
+}
+
+// Função para salvar a pontuação no localStorage
+function salvarPontuacao(nomeJogador, pontuacaoFinal) {
+  let pontuacoes = JSON.parse(localStorage.getItem('pontuacoes')) || [];
+  pontuacoes.push({ nome: nomeJogador, pontuacao: pontuacaoFinal });
+  localStorage.setItem('pontuacoes', JSON.stringify(pontuacoes));
+}
+
+// Adiciona o event listener ao botão de pontuação
+scoreButton.addEventListener('click', () => {
+  showScreen(scoreScreen);
+  mostrarPontuacoes();
+});
+
+// Tela de pontuação
+const scoreScreen = document.getElementById('score-screen');
+
+// Adiciona o event listener ao botão de pontuação
+scoreButton.addEventListener('click', () => {
+  showScreen(scoreScreen);
+  mostrarPontuacoes();
+});
+
+// Função para exibir as pontuações
+function mostrarPontuacoes() {
+  const pontuacoes = JSON.parse(localStorage.getItem('pontuacoes')) || [];
+
+  // Verifica se não há pontuações salvas e exibe um alerta
+  if (pontuacoes.length === 0) {
+    alert("Ainda não há pontuações disponíveis. Você é o primeiro jogador!");
+    return; // Retorna cedo para não tentar mostrar pontuações
+  }
+
+  const listaPontuacoes = document.getElementById('score-list');
+  listaPontuacoes.innerHTML = ''; // Limpa a lista de pontuações existente
+
+  // Ordena e exibe as pontuações
+  pontuacoes.sort((a, b) => b.pontuacao - a.pontuacao);
+  pontuacoes.forEach(pontuacao => {
+    const elementoPontuacao = document.createElement('li');
+    elementoPontuacao.textContent = `${pontuacao.nome}: ${pontuacao.pontuacao}`;
+    listaPontuacoes.appendChild(elementoPontuacao);
+  });
+}
+
+
+// Função showScreen
+function showScreen(screen) {
+  const screens = [homeScreen, challengeScreen, instructionsScreen, bossScreen, questionScreen, victoryScreen, defeatScreen, scoreScreen];
+  
+  screens.forEach(s => s.classList.remove('active'));
+  screen.classList.add('active');
+
+  setBackgroundImage(screen);
+}
+
+
+
 });
 
 // Inicialmente mostra a tela inicial

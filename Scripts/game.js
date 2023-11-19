@@ -136,6 +136,9 @@ function mostrarResultado(vitoria) {
     perguntaDiv.textContent = vitoria ? "Você ganhou o Quiz!" : "Você perdeu o Quiz!";
     alternativasDiv.innerHTML = "";
     resultadoDiv.textContent = vitoria ? `Pontuação: ${pontuacao} de ${numeroPerguntas}` : "Você não atingiu a pontuação mínima.";
+    // Adiciona event listener ao botão para voltar do score para a tela inicial
+    const returnHomeFromScoreButton = document.getElementById('return-home-from-score');
+    returnHomeFromScoreButton.addEventListener('click', () => showScreen(homeScreen));    
 
     // Desabilita o botão para a próxima pergunta após o resultado final
     proximaPerguntaBtn.disabled = true;

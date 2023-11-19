@@ -21,6 +21,16 @@ html{
   .screen.active {
     display: flex;
   }
+  .screen {
+    display: none; /* Tela não visível por padrão */
+    /* outros estilos... */
+  }
+  
+  .screen.active {
+    display: flex; /* Tela visível quando tem a classe 'active' */
+    /* outros estilos... */
+  }
+  
 
   .theme-color {
     position: relative;
