@@ -13,7 +13,6 @@ const altButton4 = document.getElementById("alt4");
 // Variáveis para armazenar informações do quiz
 let perguntasRespondidas = [];
 let pontuacao = 0;
-let numeroPerguntas = 10; // Defina o número desejado de perguntas
 let tentativasRestantes = 3; // Defina o número de tentativas permitidas
 let bossLives = 10;
 let alternativa;
@@ -103,9 +102,27 @@ questionButton.addEventListener("click", () => {
     alternativa.checked = false;
     alternativa.style.backgroundColor = "#ffffff";
     alternativa.style.color = "#15ab7c";
-    showScreen(bossScreen);
     atualizarVidas(bossLives, tentativasRestantes);
+    victoryCheck();
 });
+
+function victoryCheck(){
+  if(bossLives === 0){
+    showScreen(victoryScreen);
+    pontuacao = 0;
+    tentativasRestantes = 3;
+    bossLives = 10;
+  } else {
+    showScreen(bossScreen);
+  }
+
+  if(tentativasRestantes === 0){
+    showScreen(defeatScreen);
+    pontuacao = 0;
+    tentativasRestantes = 3;
+    bossLives = 10;
+  }
+}
 
 function handleClick(event) {
     // Obtém o botão que foi clicado
@@ -130,13 +147,3 @@ function handleClick(event) {
   altButton2.addEventListener("click", handleClick);
   altButton3.addEventListener("click", handleClick);
   altButton4.addEventListener("click", handleClick);
-
-// Função para mostrar o resultado final do quiz
-function mostrarResultado(vitoria) {
-    perguntaDiv.textContent = vitoria ? "Você ganhou o Quiz!" : "Você perdeu o Quiz!";
-    alternativasDiv.innerHTML = "";
-    resultadoDiv.textContent = vitoria ? `Pontuação: ${pontuacao} de ${numeroPerguntas}` : "Você não atingiu a pontuação mínima.";
-
-    // Desabilita o botão para a próxima pergunta após o resultado final
-    proximaPerguntaBtn.disabled = true;
-}
