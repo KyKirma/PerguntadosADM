@@ -79,8 +79,18 @@ function atualizarPergunta(temaSorteado) {
 }
 
 
+function getCheckedButton() {
+    const buttons = document.querySelectorAll("button");
+    for (const button of buttons) {
+      if (button.checked) {
+        return button;
+      }
+    }
+    return null;
+  }
+
 questionButton.addEventListener("click", () => {
-    // Verifica se a alternativa marcada é a resposta correta
+    const alternativa = getCheckedButton();
     if (alternativa.innerText.charAt(0) === pergunta.resposta) {
         pontuacao++;
         bossLives--;
@@ -90,7 +100,9 @@ questionButton.addEventListener("click", () => {
         tentativasRestantes--;
         console.log(tentativasRestantes);
     }
-
+    alternativa.checked = false;
+    alternativa.style.backgroundColor = "#ffffff";
+    alternativa.style.color = "#15ab7c";
     showScreen(bossScreen);
     atualizarVidas(bossLives, tentativasRestantes);
 });
@@ -127,9 +139,4 @@ function mostrarResultado(vitoria) {
 
     // Desabilita o botão para a próxima pergunta após o resultado final
     proximaPerguntaBtn.disabled = true;
-}
-
-// Função para iniciar o quiz
-function iniciarQuiz() {
-    
 }
