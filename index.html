@@ -28,6 +28,7 @@
         <input type="text" id="player-name" placeholder="Seu nome" />
         <button id="continue-button">Continuar</button>
       </div>
+        <!-- Tela de Instruções -->
       <div id="instructions-screen" class="screen hidden">
         <h2>Instruções</h2>
         <ul style="padding-left: 16px; list-style-position: inside;">
@@ -35,6 +36,16 @@
           <li><b>Responder Perguntas</b>: Esteja preparado para testar seu conhecimento. As perguntas vão exigir toda a sua inteligência e agilidade mental. Cada resposta correta te aproxima da vitória e da libertação dos cachorros.</li>
           <li><b>Salvar todos!</b>: A carrocinha está com 10 cachorrinhos presos, resgate todos para vencer! Mas... Se errar 3 questões, os que restaram ficarão sentindo sua falta.</li>
         </ul>
+        <p>Confira as cores relacionadas aos temas:</p>
+        <ul id="color-theme-instructions" style="list-style: none;">
+          <li class="theme-color" data-color="orange">Áreas Funcionais</li>
+          <li class="theme-color" data-color="red">Controle</li>
+          <li class="theme-color" data-color="pink">Liderança</li>
+          <li class="theme-color" data-color="blue">Organização</li>
+          <li class="theme-color" data-color="green">Planejamento</li>
+          <li class="theme-color" data-color="yellow">Sustentabilidade</li>
+        </ul>
+
         <button id="start-button">Começar</button>
       </div>
       <!-- Tela do Chefão -->
@@ -81,6 +92,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
   <script src="./Scripts/wheel.js"></script>
-  <script src="./Scripts/game.js"></script>    
+  <script src="./Scripts/game.js"></script>
+
   </body>
 </html>

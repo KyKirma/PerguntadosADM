@@ -21,6 +21,31 @@ html{
   .screen.active {
     display: flex;
   }
+
+  .theme-color {
+    position: relative;
+    padding-left: 30px; /* Espaço para o retângulo colorido */
+    margin-bottom: 10px; /* Espaço entre os itens da lista */
+    line-height: 24px; /* Altura da linha para garantir espaço para o retângulo */
+  }
+  
+  .theme-color::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 5px; /* Posição do retângulo em relação ao texto */
+    width: 20px; /* Largura do retângulo */
+    height: 10px; /* Altura do retângulo */
+    background-color: var(--color); /* A cor do retângulo */
+  }
+  
+  /* Você precisará adicionar uma regra para cada cor para definir a variável --color */
+  .theme-color[data-color="orange"]::before { background-color: orange; }
+  .theme-color[data-color="red"]::before { background-color: red; }
+  .theme-color[data-color="pink"]::before { background-color: pink; }
+  .theme-color[data-color="blue"]::before { background-color: blue; }
+  .theme-color[data-color="green"]::before { background-color: green; }
+  .theme-color[data-color="yellow"]::before { background-color: yellow; }
   
   #game-container {
     display: grid;
