@@ -100,15 +100,20 @@ questionButton.addEventListener("click", () => {
         bossLives--;
         console.log(pontuacao);
         console.log(bossLives);
+        alternativa.style.backgroundColor = "#00ed10";
     } else {
         tentativasRestantes--;
         console.log(tentativasRestantes);
+        alternativa.style.backgroundColor = "#ca1700";
     }
-    alternativa.checked = false;
-    alternativa.style.backgroundColor = "#ffffff";
-    alternativa.style.color = "#15ab7c";
-    atualizarVidas(bossLives, tentativasRestantes);
-    victoryCheck();
+    setTimeout(() => {
+      alternativa.checked = false;
+      alternativa.style.backgroundColor = "#ffffff";
+      alternativa.style.color = "#15ab7c";
+      atualizarVidas(bossLives, tentativasRestantes);
+      victoryCheck();
+    }, 3000);
+    
 });
 
 function victoryCheck(){

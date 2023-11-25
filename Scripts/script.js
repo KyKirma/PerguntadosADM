@@ -120,3 +120,6 @@ tryAgainButton.addEventListener('click', () => showScreen(homeScreen));
 showScreen(homeScreen);
 
 audio.play();
+audio.addEventListener('ended', () => {
+  audio.next();
+});
