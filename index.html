@@ -12,29 +12,25 @@
 </head>
 <body>
   <div id="game-container">
-    <audio src="./OST/Relaxing and Stressful.mp3" volume="50" loop="true" id="audio" autoplay></audio>
+    <audio volume="50" id="audio">
+      <source src="./OST/Relaxing and Stressful.mp3">
+      <source src="./OST/Rain Walk.mp3">
+      <source src="./OST/Soda Gift Spill.mp3">
+    </audio>
+    <audio src="./OST/First Dream.mp3" volume="50" loop="true" id="audioDefeat"></audio>
+    <audio src="./OST/Insert Coin.mp3" volume="50" loop="true" id="audioVictory"></audio>
     <div>
       <!-- Tela Inicial -->
       <div id="home-screen" class="screen">
         <img src="Images/logoQuiz.png" alt="Logo_Jogo">
         <button id="play-button">Jogar</button>
-        <button id="score-button">Score</button>
       </div>
-      <!-- Tela de Pontuação -->
-      <div id="score-screen" class="screen hidden">
-        <h2>Pontuação</h2>
-        <ul id="score-list"></ul>
-        <!-- O id do botão deve corresponder ao do event listener -->
-        <button id="return-home-from-score">Voltar ao Início</button>
-      </div>
-
       <!-- Tela do Desafio -->
       <div id="challenge-screen" class="screen hidden">
         <h2>Novo Desafio</h2>
         <p>
           Embarque em uma jornada emocionante onde a sorte, a sabedoria sobre administração pavimentaram o caminho para a salvação dos nossos amigos de quatro patas. Sua missão? Rodar a roleta e  responder perguntas desafiadoras e enfrentar o temível Chefão para libertar os cachorros e trazê-los de volta para casa.
         </p>
-        <input type="text" id="player-name" placeholder="Seu nome" />
         <button id="continue-button">Continuar</button>
       </div>
         <!-- Tela de Instruções -->
@@ -84,12 +80,16 @@
       <!-- Tela de Vitória -->
       <div id="victory-screen" class="screen hidden">
         <h2>Você Venceu!</h2>
-        <button id="return-button">Voltar</button>
+        <img src="./Images/happyDogs.jpg" alt="Cachorros felizes">
+        <p>Você salvou todos eles! Eles estão muito felizes em ter te encontrado c:</p>
+        <button id="return-button">Adotar</button>
       </div>
       <!-- Tela de Derrota -->
       <div id="defeat-screen" class="screen hidden">
         <h2>Você Perdeu :C</h2>
-        <button id="try-again-button">Tentar dnv</button>
+        <img src="./Images/sadDogs.jpg" alt="Cachorros capengas">
+        <p>Não desista ainda... Tire eles dessa situação precária e capenga</p>
+        <button id="try-again-button">Tentar novamente</button>
       </div>
     </div>
     <footer>

@@ -121,6 +121,20 @@ html{
     padding: 2px;
   }
 
+  #victory-screen > img{
+    width: 20rem;
+    height: 20rem;
+    padding: 2px;
+    border-radius: 20%;
+  }
+
+  #defeat-screen > img{
+    width: 20rem;
+    height: 20rem;
+    padding: 2px;
+    border-radius: 20%;
+  }
+
   p, h2{
     padding-left: 30px;
     padding-right: 30px;

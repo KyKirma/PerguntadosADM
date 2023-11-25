@@ -3,7 +3,6 @@ const bossLivesTela = document.getElementById("boss-lives");
 const bossLivesText = document.getElementById("boss-lives-text");
 const playerLivesTela = document.getElementById("player-lives");
 
-
 // Botões das alternativas
 const altButton1 = document.getElementById("alt1");
 const altButton2 = document.getElementById("alt2");
@@ -135,7 +134,7 @@ function handleClick(event) {
     const button = event.target;
   
     button.checked = true;
-    button.style.backgroundColor = "#7fffd4";
+    button.style.backgroundColor = "#66ab93";
     button.style.color = "#ffffff";
 
     for (let i = 1; i < 5; i++) {

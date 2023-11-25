@@ -11,8 +11,6 @@ const questionScreen = document.getElementById('question-screen');
 
 // Inicializa variáveis para controlar botões
 const playButton = document.getElementById('play-button');
-const scoreScreen = document.getElementById('score-screen');
-const scoreButton = document.getElementById('score-button');
 const continueButton = document.getElementById('continue-button');
 const startButton = document.getElementById('start-button');
 const returnButton = document.getElementById('return-button');
@@ -28,8 +26,10 @@ const questionAlternatives = document.getElementById('question-alternatives');
 
 // Inicializa os Audios
 const audio = document.getElementById("audio");
+const audioVictory = document.getElementById("audioVictory");
+const audioDefeat = document.getElementById("audioDefeat");
 
-
+audio.play();
 // Função para mostrar uma tela específica
 function showScreen(screen) {
   const screens = [homeScreen, challengeScreen, instructionsScreen, bossScreen,questionScreen, victoryScreen, defeatScreen];
@@ -66,7 +66,42 @@ let setBackgroundImage = (screen) => {
     case bossScreen:
       gameContainer.style.backgroundImage = "url('./Images/BossBackground.png')";
       break;
+    case defeatScreen:
+      gameContainer.style.backgroundImage = "url('./Images/DefeatBackground.jpg')";
+      audio.pause();
+      audioDefeat.play();
+      break;
+    case victoryScreen:
+      gameContainer.style.backgroundImage = "url('./Images/VictoryBackground.jpg')";
+      audio.pause();
+      audioVictory.play();
+      break;
+    case questionScreen:
+      let tema = questionLabel.className;
+      switch(tema){
+        case "areasfuncionais":
+          gameContainer.style.backgroundImage = "url('./Images/areasfuncionaisBackground.png')";
+          break;
+        case "controle":
+          gameContainer.style.backgroundImage = "url('./Images/controleBackground.png')";
+          break;
+        case "lideranca":
+          gameContainer.style.backgroundImage = "url('./Images/liderancaBackground.png')";
+          break;
+        case "organizacao":
+          gameContainer.style.backgroundImage = "url('./Images/organizacaoBackground.png')";
+          break;
+        case "planejamento":
+          gameContainer.style.backgroundImage = "url('./Images/planejamentoBackground.png')";
+          break;
+        default:
+          gameContainer.style.backgroundImage = "url('./Images/MainBackground.jpg')";
+      }
+      break;
     default:
+      audio.play();
+      audioDefeat.pause();
+      audioVictory.pause();
       gameContainer.style.backgroundImage = "url('./Images/MainBackground.jpg')";
   }
 };
@@ -80,91 +115,8 @@ startButton.addEventListener('click', () => {
   atualizarVidas(10, 3);});
 returnButton.addEventListener('click', () => showScreen(homeScreen));
 tryAgainButton.addEventListener('click', () => showScreen(homeScreen));
-scoreButton.addEventListener('click', () => {
-
-
-// Função para exibir as pontuações
-function mostrarPontuacoes() {
-  const pontuacoes = JSON.parse(localStorage.getItem('pontuacoes')) || [];
-  const listaPontuacoes = document.getElementById('score-list');
-  
-  // Limpa a lista de pontuações existente
-  listaPontuacoes.innerHTML = '';
-
-  // Ordena as pontuações em ordem decrescente
-  pontuacoes.sort((a, b) => b.pontuacao - a.pontuacao);
-
-  // Cria e adiciona cada pontuação como um item da lista
-  pontuacoes.forEach(pontuacao => {
-    const elementoPontuacao = document.createElement('li');
-    elementoPontuacao.textContent = `${pontuacao.nome}: ${pontuacao.pontuacao}`;
-    listaPontuacoes.appendChild(elementoPontuacao);
-  });
-}
-
-// Função para salvar a pontuação no localStorage
-function salvarPontuacao(nomeJogador, pontuacaoFinal) {
-  let pontuacoes = JSON.parse(localStorage.getItem('pontuacoes')) || [];
-  pontuacoes.push({ nome: nomeJogador, pontuacao: pontuacaoFinal });
-  localStorage.setItem('pontuacoes', JSON.stringify(pontuacoes));
-}
-
-// Adiciona o event listener ao botão de pontuação
-scoreButton.addEventListener('click', () => {
-  showScreen(scoreScreen);
-  mostrarPontuacoes();
-});
-
-// Tela de pontuação
-const scoreScreen = document.getElementById('score-screen');
-
-// Adiciona o event listener ao botão de pontuação
-scoreButton.addEventListener('click', () => {
-  showScreen(scoreScreen);
-  mostrarPontuacoes();
-});
-
-// Função para exibir as pontuações
-function mostrarPontuacoes() {
-  const pontuacoes = JSON.parse(localStorage.getItem('pontuacoes')) || [];
-
-  // Verifica se não há pontuações salvas e exibe um alerta
-  if (pontuacoes.length === 0) {
-    alert("Ainda não há pontuações disponíveis. Você é o primeiro jogador!");
-    return; // Retorna cedo para não tentar mostrar pontuações
-  }
-
-  const listaPontuacoes = document.getElementById('score-list');
-  listaPontuacoes.innerHTML = ''; // Limpa a lista de pontuações existente
-
-  // Ordena e exibe as pontuações
-  pontuacoes.sort((a, b) => b.pontuacao - a.pontuacao);
-  pontuacoes.forEach(pontuacao => {
-    const elementoPontuacao = document.createElement('li');
-    elementoPontuacao.textContent = `${pontuacao.nome}: ${pontuacao.pontuacao}`;
-    listaPontuacoes.appendChild(elementoPontuacao);
-  });
-}
-
-
-// Função showScreen
-function showScreen(screen) {
-  const screens = [homeScreen, challengeScreen, instructionsScreen, bossScreen, questionScreen, victoryScreen, defeatScreen, scoreScreen];
-  
-  screens.forEach(s => s.classList.remove('active'));
-  screen.classList.add('active');
-
-  setBackgroundImage(screen);
-}
-
-
-
-});
 
 // Inicialmente mostra a tela inicial
 showScreen(homeScreen);
 
-playButton.addEventListener('click', () => {
-    audio.play();
-  });
-  
+audio.play();
