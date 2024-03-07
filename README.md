@@ -2,7 +2,7 @@
 Projeto Final da ementa Introdução a Administração
 
 
-Veja o resultado [aqui](kykirma.github.io/PerguntadosADM/)
+Veja o resultado [aqui](https://kykirma.github.io/PerguntadosADM/)
 
 ## Projeto
 O projeto se baseia em implementar o jogo de perguntas e respostas(quiz) sobre administração. Divido por tópicos e dificuldade, o usuário tem que resgatar os cachorrinhos da carrocinha acertando as perguntas. 
