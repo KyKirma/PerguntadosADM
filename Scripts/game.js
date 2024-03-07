@@ -94,6 +94,13 @@ function getCheckedButton() {
   }
 
 questionButton.addEventListener("click", () => {
+    //desativar os botões, evitar varias submissões
+    altButton1.setAttribute("disabled", "true");
+    altButton2.setAttribute("disabled", "true");
+    altButton3.setAttribute("disabled", "true");
+    altButton4.setAttribute("disabled", "true");
+    questionButton.setAttribute("disabled", "true");
+
     const alternativa = getCheckedButton();
     if (alternativa.innerText.charAt(0) === pergunta.resposta) {
         pontuacao++;
@@ -107,6 +114,11 @@ questionButton.addEventListener("click", () => {
         alternativa.style.backgroundColor = "#ca1700";
     }
     setTimeout(() => {
+      altButton2.removeAttribute("disabled");
+      altButton3.removeAttribute("disabled");
+      altButton4.removeAttribute("disabled");
+      altButton1.removeAttribute("disabled");
+      questionButton.removeAttribute("disabled");
       alternativa.checked = false;
       alternativa.style.backgroundColor = "#ffffff";
       alternativa.style.color = "#15ab7c";
